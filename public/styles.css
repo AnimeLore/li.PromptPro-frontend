@@ -28,6 +28,7 @@ code {
 a {
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
 }
 
 img {
