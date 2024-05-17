@@ -14,41 +14,47 @@
   }
 }
 
-// Colors
+$color-white: #fff;
 $color-black: #000;
-$color-white: var(--color-white);
+$color-grey: #505050;
 
 //NavBannerComponent
 $color-bg: #EFEFEF;
 $color-border: #25272A;
 
-// Text
-$color-main-text: var(--color-main-text);
-$color-another-main-text: var(--color-another-main-text);
+//text
+$color-text-primary: #25272A;
+$color-text-secondary: #707274;
+$color-text-active: #04D15C;
+$color-text-inverted: #FFFFFF;
 
-// Grey
-$color-grey: var(--color-grey);
-$color-grey-text: var(--color-grey-text);
-$color-grey-text-hover: var(--color-grey-text-hover);
+//brand
+$color-brand-primary: #04D15C;
+$color-brand-secondary: #04D15C;
 
-// Text
-$color-white-text: var(--color-white-text);
-$color-dark-grey-text: var(--color-dark-grey-text);
+//controls
+$color-controls-primary: #25272A;
+$color-controls-secondary: #25272A;
+$color0controls-tertiary: #25272A;
 
-// Main
-$color-main-blue: var(--color-main-blue);
-$color-main-blue-hover: var(--color-main-blue-hover);
-$color-main-blue-active: var(--color-main-blue-active);
+//background
+$color-background-primary: #EFEFEF;
+$color-background-secondary: #FFFFFF;
+$color-background-active: #04D15C;
+$color-background-inverted: #25272A;
+$color-background-grey: #707274;
 
-// Other
-$color-error: #940202;
-$color-disabled: var(--color-disabled);
-$color-background-header-and-footer: var(--color-background-header-and-footer);
-$color-link: #25638F;
-$color-popup-shading: #16161A;
-$color-cta-gradient: var(--color-cta-gradient);
+//icon
+$color-icon-primary: #25272A;
+$color-icon-secondary: #707274;
+$color-icon-active: #04D15C;
+$color-icon-inverted: #FFFFFF;
 
-// Sizes
+//stroke
+$color-stroke-primary: #25272A;
+$color-stroke-active: #04D15C;
+
+  // Sizes
 $width-desk-wide: 1281px;
 $width-desk-narrow: 1025px;
 $width-tablet-wide: 861px;
@@ -153,6 +159,14 @@ html, body {
   font-family: "Lato", sans-serif;
   font-size: $size;
   font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin regular($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 400;
   line-height: $line-height;
   color: $color;
 }
