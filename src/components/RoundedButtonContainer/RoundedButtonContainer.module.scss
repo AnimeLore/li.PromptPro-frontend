@@ -1,10 +1,12 @@
-@import "styles/global.scss";
+@import "styles/global";
 
 .btn_container {
-  background: $color-controls-primary;
-  padding: 12px 14px;
-  border-radius: 8px;
   @include controls-button(14px, 120%, $color-text-inverted);
-  border: none;
   cursor: pointer;
+
+  padding: 12px 14px;
+
+  background: $color-controls-primary;
+  border: none;
+  border-radius: 8px;
 }
