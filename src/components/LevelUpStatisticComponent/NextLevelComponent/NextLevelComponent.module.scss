@@ -1,0 +1,12 @@
+@import "styles/global";
+
+.container {
+  @include controls-button(14px, 120%, $color-text-inverted);
+  width: fit-content;
+  padding: 14px 12px;
+
+  color: $color-text-inverted;
+
+  background: $color-background-active;
+  border-radius: 24px;
+}

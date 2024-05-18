@@ -1,0 +1,12 @@
+@import "styles/global";
+
+.btn_container {
+  @include controls-button(14px, 120%, $color-text-inverted);
+  cursor: pointer;
+
+  padding: 12px 14px;
+
+  background: $color-controls-primary;
+  border: none;
+  border-radius: 8px;
+}

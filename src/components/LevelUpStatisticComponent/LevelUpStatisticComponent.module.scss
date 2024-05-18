@@ -1,0 +1,41 @@
+@import "styles/global";
+
+.container {
+  max-width: 412px;
+  max-height: 212px;
+  padding: 16px 20px;
+
+  background: $color-background-secondary;
+  border-radius: 20px;
+
+  .wrapper {
+    .h3 {
+      @include heading3(22px, 24%, $color-text-primary);
+    }
+
+    .img_and_text {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 12px;
+      margin-bottom: 21px;
+    }
+  }
+
+  .RowToLevelUp {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 21px;
+
+    .kubiks {
+      display: flex;
+      gap: 4px;
+      justify-content: space-between;
+    }
+  }
+}

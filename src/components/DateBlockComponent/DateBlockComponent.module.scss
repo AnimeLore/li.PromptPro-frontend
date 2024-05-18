@@ -1,0 +1,34 @@
+@import "styles/global";
+
+.block_container {
+  width: fit-content;
+  padding: 7px;
+
+  border-radius: 8px;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+  }
+}
+
+.block_active {
+  background: $color-background-active;
+
+  span {
+    color: $color-white;
+  }
+}
+
+.block_inactive {
+  background: $color-background-primary;
+
+  span {
+    color: $color-text-primary;
+ }
+}

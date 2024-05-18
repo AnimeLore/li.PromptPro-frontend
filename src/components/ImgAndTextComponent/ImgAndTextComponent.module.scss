@@ -1,0 +1,11 @@
+@import "styles/global";
+
+.container {
+  @include paragraph2(14px, 130%, $color-text-secondary);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  width: max-content;
+  padding: 1px;
+}
