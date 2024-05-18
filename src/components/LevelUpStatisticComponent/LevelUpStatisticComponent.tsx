@@ -5,6 +5,7 @@ import { ImgAndTextComponent } from "../ImgAndTextComponent/ImgAndTextComponent"
 import { NextLevelComponent } from "./NextLevelComponent/NextLevelComponent";
 import arrow_img from "../../assets/icons/arrow.svg"
 import { DateBlockComponent } from "../DateBlockComponent/DateBlockComponent";
+import { RoundedButtonContainer } from "../RoundedButtonContainer/RoundedButtonContainer";
 
 export const LevelUpStatisticComponent: React.FC<ILevelUpStatisticComponentProps> = ({level, completedTasks}) => {
   const remaning_tests = (Math.floor( level / 10) + 1) * 5
@@ -20,9 +21,9 @@ export const LevelUpStatisticComponent: React.FC<ILevelUpStatisticComponentProps
           {remaning_tests} тестов для нового уровня
         </h3>
         <div className={s.img_and_text}>
-          <ImgAndTextComponent isDone={true} text={"Случайные тесты"} />
-          <ImgAndTextComponent isDone={false} text={"Бимбим-бамбам"} />
-          <ImgAndTextComponent isDone={false} text={"Бимбим-бамбам"} />
+          <ImgAndTextComponent isDone={true} text={"Тесты тем"} />
+          <ImgAndTextComponent isDone={false} text={"Случайные тесты"} />
+          <ImgAndTextComponent isDone={false} text={"Повтор тестов"} />
         </div>
       </div>
       <div className={s.RowToLevelUp}>
@@ -37,6 +38,7 @@ export const LevelUpStatisticComponent: React.FC<ILevelUpStatisticComponentProps
         <img src={arrow_img} alt="arrow" />
         <NextLevelComponent nextLevel={level + 1} />
       </div>
+      <RoundedButtonContainer text={"Случайный текст"} />
     </div>
   );
 };
