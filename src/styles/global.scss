@@ -1,0 +1,219 @@
+@use "sass:math";
+
+// Common styles
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 96%;
+  }
+}
+
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #505050;
+
+//NavBannerComponent
+$color-bg: #EFEFEF;
+$color-border: #25272A;
+
+//text
+$color-text-primary: #25272A;
+$color-text-secondary: #707274;
+$color-text-active: #04D15C;
+$color-text-inverted: #FFFFFF;
+
+//brand
+$color-brand-primary: #04D15C;
+$color-brand-secondary: #04D15C;
+
+//controls
+$color-controls-primary: #25272A;
+$color-controls-secondary: #25272A;
+$color0controls-tertiary: #25272A;
+
+//background
+$color-background-primary: #EFEFEF;
+$color-background-secondary: #FFFFFF;
+$color-background-active: #04D15C;
+$color-background-inverted: #25272A;
+$color-background-grey: #707274;
+
+//icon
+$color-icon-primary: #25272A;
+$color-icon-secondary: #707274;
+$color-icon-active: #04D15C;
+$color-icon-inverted: #FFFFFF;
+
+//stroke
+$color-stroke-primary: #25272A;
+$color-stroke-active: #04D15C;
+
+  // Sizes
+$width-desk-wide: 1281px;
+$width-desk-narrow: 1025px;
+$width-tablet-wide: 861px;
+$width-tablet-narrow: 769px;
+$width-mobile-wide: 451px;
+$width-mobile-narrow: 331px;
+
+html, body {
+  //scrollbar-color: $color-grey;
+  //scrollbar-width: thin;
+
+  body {
+    background-color: $color-white;
+
+    transition: background-color 0.3s ease-out;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-grey;
+    border-radius: 50px;
+  }
+}
+
+// Mixins
+@mixin heading1($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin heading2($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin heading3($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin subheading($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin controls-button($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph1($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 600;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph1-primary($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph2($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 600;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin paragraph2-bold($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin caption($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin regular($size, $line-height, $color) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin no-selection() {
+  /* iOS Safari */
+  user-select: none;
+
+  -webkit-touch-callout: none;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin icon-size($width, $height) {
+  min-width: $width;
+  max-width: $width;
+  min-height: $height;
+  max-height: $height;
+}
+
+@mixin button-default() {
+  cursor: pointer;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  outline: 0;
+}
+
+@mixin avatar-wrapper($border: 2px, $size: 84px, $color: #454545) {
+  $radius: math.div($size, 2) - $border;
+  width: $size;
+  height: $size;
+
+  clip-path: circle($radius);
+
+  img {
+    $offset: $radius - $border;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    clip-path: circle($offset);
+  }
+}

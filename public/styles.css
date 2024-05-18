@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
 
-  font-family: -apple-system, 'Yandex Sans Text', sans-serif;
+  font-family: -apple-system, 'Lato', sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +28,7 @@ code {
 a {
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
 }
 
 img {
