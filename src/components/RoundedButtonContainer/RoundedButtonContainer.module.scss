@@ -6,4 +6,5 @@
   border-radius: 8px;
   @include controls-button(14px, 120%, $color-text-inverted);
   border: none;
+  cursor: pointer;
 }
