@@ -1,0 +1,127 @@
+@import "../../styles/global.scss";
+@import "../../../public/styles.css";
+
+@mixin border-radius {
+  border-radius: 4px;
+}
+
+@mixin progress {
+  display: flex;
+  gap: 2px;
+  height: 18px;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.SkillToProgressComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  > p {
+    @include paragraph1(16px, 125%, $color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    > span {
+      @include paragraph2(14px, 130%, $color-text-active);
+      display: flex;
+      gap: 2px;
+    }
+  }
+
+  .setting-the-task {
+    @include progress;
+
+    .progress__now {
+      @include border-radius;
+      width: 64px;
+      height: 100%;
+      background-color: $color-background-inverted;
+    }
+
+    .progress__new {
+      @include border-radius;
+      width: 10px;
+      height: 100%;
+      background-color: $color-background-active;
+    }
+  }
+
+  .monitoring {
+    @include progress;
+
+    .progress__now {
+      @include border-radius;
+      width: 24px;
+      height: 100%;
+      background-color: $color-background-inverted;
+    }
+
+    .progress__new {
+      @include border-radius;
+      width: 32px;
+      height: 100%;
+      background-color: $color-background-active;
+    }
+  }
+
+  .analysis {
+    @include progress;
+
+    .progress__now {
+      @include border-radius;
+      width: 42px;
+      height: 100%;
+      background-color: $color-background-inverted;
+    }
+
+    .progress__new {
+      @include border-radius;
+      width: 88px;
+      height: 100%;
+      background-color: $color-background-active;
+    }
+  }
+
+  .study {
+    @include progress;
+
+    .progress__now {
+      @include border-radius;
+      width: 8px;
+      height: 100%;
+      background-color: $color-background-inverted;
+    }
+
+    .progress__new {
+      @include border-radius;
+      width: 24px;
+      height: 100%;
+      background-color: $color-background-active;
+    }
+  }
+
+  .result-processing {
+    @include progress;
+
+    .progress__now {
+      @include border-radius;
+      width: 16px;
+      height: 100%;
+      background-color: $color-background-inverted;
+    }
+
+    .progress__new {
+      @include border-radius;
+      width: 46px;
+      height: 100%;
+      background-color: $color-background-active;
+    }
+  }
+}
