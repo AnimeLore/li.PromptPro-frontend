@@ -1,0 +1,53 @@
+@import '../../styles/global.scss';
+@import '../../../public/styles.css';
+
+.UserComponent {
+  display: flex;
+  gap: 12px;
+  max-width: 292px;
+  align-items: center;
+}
+
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.UserName{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  line-height: 130%;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.UserProgress {
+  display: flex;
+  gap: 6px;
+}
+
+.LessonDay {
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: #707274;
+  font-weight: bold;
+}
+
+.NextLevelComponent {
+  width: fit-content;
+  padding: 0 8px;
+
+  color: #FFF;
+
+  background: #04D15C;
+  border-radius: 24px;
+
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  line-height: 130%;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
