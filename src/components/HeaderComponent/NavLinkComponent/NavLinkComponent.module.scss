@@ -1,0 +1,28 @@
+@import "styles/global.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  span {
+    @include paragraph1(16, 125%, $color-text-secondary);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $color-text-secondary;
+  }
+}
+
+.active {
+  span {
+    @include paragraph1(16, 125%, $color-text-primary);
+  }
+  svg {
+
+    fill: $color-text-secondary;
+  }
+}
