@@ -1,8 +1,10 @@
-import React from "react";
-import { INextLevelComponentProps } from "../../../types/NextLevelComponentProps/INextLevelComponentProps";
-import s from "./NextLevelComponent.module.scss"
+import React from 'react';
 
-export const NextLevelComponent: React.FC<INextLevelComponentProps> = ({nextLevel}) => {
+import s from './NextLevelComponent.module.scss';
+
+import { INextLevelComponentProps } from '../../../types/NextLevelComponentProps/INextLevelComponentProps';
+
+export const NextLevelComponent: React.FC<INextLevelComponentProps> = ({ nextLevel }) => {
   return (
     <div className={s.container}>
       <span>{nextLevel} уровень</span>
