@@ -1,31 +1,49 @@
-import React from 'react';
-import cn from 'classnames';
-import {IHeaderComponentProps} from "../../types/HeaderComponentProps/IHeaderComponentProps";
-import {NavLinkComponent} from "./NavLinkComponent/NavLinkComponent";
-import {ReactComponent as Arrow} from "assets/icons/arrow.svg";
+import { ReactComponent as Arrow } from 'assets/icons/cross.svg';
 
-export const HeaderComponent: React.FC<IHeaderComponentProps> = ({courseId, value, max}) => {
+import cn from 'classnames';
+import React from 'react';
+
+import s from './HeaderComponent.module.scss';
+import { NavFooterComponent } from './NavFooterComponent/NavFooterComponent';
+import { NavLinkComponent } from './NavLinkComponent/NavLinkComponent';
+
+import { IHeaderComponentProps } from '../../types/HeaderComponentProps/IHeaderComponentProps';
+
+export const HeaderComponent: React.FC<IHeaderComponentProps> = ({ courseId, value, max }) => {
   return (
-    <header>
+    <header className={s.container}>
+      <h1>PromptPro</h1>
       <nav>
-        <ul> { /*TODO: delete marker*/}
-          <li><NavLinkComponent icon={Arrow} text={"Главная"} isActive={true}/></li>
+        <ul> { /* TODO: весь текст вынести в constants */}
+          <li>
+            <NavLinkComponent icon={Arrow} text={'Главная'} isActive={true} />
+          </li>
           <li />
-            {
-           // <NavProgressBarComponent courseId={courseId} value={value} max={max}/></li>
-            }
-            <li><NavLinkComponent icon={Arrow} text={"Мои успехи"} isActive={true} /></li>
-          <li><NavLinkComponent icon={Arrow} text={"Избранное и заметки"} isActive={true} /></li>
-          <li><NavLinkComponent icon={Arrow} text={"Изученные темы"} isActive={true} /></li>
           {
-           // <li><NavBannerComponent /></li>
+            // <NavProgressBarComponent courseId={courseId} value={value} max={max}/></li>
           }
-            <li><NavLinkComponent icon={Arrow} text={"Поддержка"} isActive={true}/></li>
+          <li>
+            <NavLinkComponent icon={Arrow} text={'Мои успехи'} isActive={true} />
+          </li>
+          <li>
+            <NavLinkComponent icon={Arrow} text={'Избранное и заметки'} isActive={true} />
+          </li>
+          <li>
+            <NavLinkComponent icon={Arrow} text={'Изученные темы'} isActive={true} />
+          </li>
+          <li>
+            {/* заглушка для отступа */}
+            <br />
+          </li>
+          {
+            // <li><NavBannerComponent /></li>
+          }
+          <li>
+            <NavLinkComponent icon={Arrow} text={'Поддержка'} isActive={true} />
+          </li>
         </ul>
       </nav>
-      {//<NavFooterComponent />
-      }
+      <NavFooterComponent />
     </header>
   );
 };
-
