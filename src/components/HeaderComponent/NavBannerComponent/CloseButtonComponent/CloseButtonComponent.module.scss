@@ -1,0 +1,10 @@
+@import "styles/global.scss";
+
+.container {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  svg {
+    fill: $color-text-secondary;
+  }
+}
