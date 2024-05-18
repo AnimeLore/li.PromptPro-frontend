@@ -1,0 +1,31 @@
+@import "styles/global.scss";
+
+.container {
+  background: $color-background-secondary;
+  width: 412px;
+
+  .wrapper {
+    .h3 {
+      @include heading3(22, 24%, $color-text-primary);
+    }
+
+    .img_and_text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .RowToLevelUp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    .kubiks {
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+    }
+  }
+}

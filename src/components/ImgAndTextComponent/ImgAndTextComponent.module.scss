@@ -1,0 +1,9 @@
+@import "styles/global.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px;
+  @include paragraph2(14, 130%, $color-text-secondary);
+}
