@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+@import "../../../public/styles.css";
+@import "../../styles/global.css";
+
+.NavBannerComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 16px;
+
+  background-color: $color-bg;
+  border: 1px solid $color-stroke-primary;
+  border-radius: 12px;
+  max-width: 260px;
+
+  h4 {
+    font-family: "Lato", sans-serif;
+    @include paragraph1(16px, 125%, #000);
+  }
+
+  p {
+    font-family: "Lato", sans-serif;
+    @include paragraph1(14px, 120%, #707274);
+    letter-spacing: 1px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

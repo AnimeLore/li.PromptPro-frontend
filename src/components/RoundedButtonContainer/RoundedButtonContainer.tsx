@@ -7,7 +7,7 @@ import { RoundedButtonProps } from '../../types/RoundedButtonProps/RoundedButton
 export const RoundedButtonContainer: React.FC<RoundedButtonProps> = ({ text }) => {
   return (
     <button className={s.btn_container}>
-      <p>{text}</p>
+      <span>{text}</span>
     </button>
   );
 };

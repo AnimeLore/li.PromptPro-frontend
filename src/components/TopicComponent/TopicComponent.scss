@@ -1,0 +1,69 @@
+@import "../../styles/global.scss";
+@import "../../../public/styles.css";
+@import "../DescriptionTopicComponent/DescriptionTopicComponent.css";
+
+@mixin eight-gap {
+  display: flex;
+  gap: 8px;
+}
+
+.TopicComponent {
+  max-width: 1110px;
+  display: flex;
+  border-radius: 16px;
+  padding: 0 0 20px 0;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 70px 0 20px;
+
+    .TopicComponent__header {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 140%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      div {
+        @include eight-gap;
+      }
+
+      h2 {
+        @include subheading(18px, 140%, $color-text-primary);
+      }
+    }
+
+    .btn_container {
+      @include controls-button(14px, 120%, $color-text-inverted);
+      cursor: pointer;
+
+      padding: 12px 14px;
+
+      background: $color-controls-primary;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+
+  &__right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+
+    div {
+      @include eight-gap;
+      padding: 4px 20px 4px 0;
+
+      p {
+        @include caption(12px, 130%, $color-text-secondary)
+      }
+    }
+  }
+}
