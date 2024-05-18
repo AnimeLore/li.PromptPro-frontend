@@ -2,17 +2,23 @@
 
 .container {
   background: $color-background-secondary;
-  width: 412px;
+  max-width: 412px;
+  max-height: 212px;
+  padding: 16px 20px;
+  border-radius: 20px;
 
   .wrapper {
     .h3 {
-      @include heading3(22, 24%, $color-text-primary);
+      @include heading3(22px, 24%, $color-text-primary);
     }
 
     .img_and_text {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      margin-top: 12px;
+      margin-bottom: 21px;
+      gap: 8px;
     }
   }
 
@@ -21,6 +27,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    margin-bottom: 21px;
 
     .kubiks {
       display: flex;
