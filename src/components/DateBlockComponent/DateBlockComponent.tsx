@@ -1,10 +1,12 @@
-import React from "react";
-import { IDateBlockProps } from "../../types/DateBlockProps/IDateBlockProps";
-import s from "./DateBlockComponent.module.scss"
-import cn from 'classnames'
+import cn from 'classnames';
+import React from 'react';
 
-export const DateBlockComponent: React.FC<IDateBlockProps> = ({isActive, number}) => {
-  const st = isActive ? s.block_active: s.block_inactive
+import s from './DateBlockComponent.module.scss';
+
+import { IDateBlockProps } from '../../types/DateBlockProps/IDateBlockProps';
+
+export const DateBlockComponent: React.FC<IDateBlockProps> = ({ isActive, number }) => {
+  const st = isActive ? s.block_active : s.block_inactive;
 
   return (
     <div className={cn(s.block_container, st)}>

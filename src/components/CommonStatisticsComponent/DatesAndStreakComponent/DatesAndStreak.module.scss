@@ -1,0 +1,24 @@
+@import "styles/global.scss";
+
+.container {
+  display: flex;
+
+  .daysAndBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .top_container {
+      h2 {
+        @include heading2(18px, 135%, $color-text-primary);
+      }
+    }
+
+    .blocks_row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
+

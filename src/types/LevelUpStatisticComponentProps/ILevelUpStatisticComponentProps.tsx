@@ -1,4 +1,4 @@
 export interface ILevelUpStatisticComponentProps {
-  level: number
-  completedTasks: number
+  level: number;
+  completedTasks: number;
 }

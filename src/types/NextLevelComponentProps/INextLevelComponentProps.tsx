@@ -1,3 +1,3 @@
 export interface INextLevelComponentProps {
-  nextLevel: number
+  nextLevel: number;
 }

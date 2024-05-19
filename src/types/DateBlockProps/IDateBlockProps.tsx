@@ -1,4 +1,4 @@
 export interface IDateBlockProps {
-  isActive: boolean
-  number: number
+  isActive: boolean;
+  number: number;
 }

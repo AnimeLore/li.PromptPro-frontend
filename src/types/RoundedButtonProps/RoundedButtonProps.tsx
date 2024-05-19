@@ -1,3 +1,3 @@
 export interface RoundedButtonProps {
-  text: string
+  text: string;
 }
