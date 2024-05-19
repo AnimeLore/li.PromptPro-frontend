@@ -11,7 +11,7 @@ import { ImgAndTextComponent } from '../ImgAndTextComponent/ImgAndTextComponent'
 import { RoundedButtonContainer } from '../RoundedButtonContainer/RoundedButtonContainer';
 
 export const LevelUpStatisticComponent: React.FC<ILevelUpStatisticComponentProps> = ({ level, completedTasks }) => {
-  const remaning_tests = (Math.floor(level / 10) + 1) * 5;
+  const remainingTests = (Math.floor(level / 10) + 1) * 5;
 
   // if (completedTasks < 3) {
   //
@@ -20,7 +20,7 @@ export const LevelUpStatisticComponent: React.FC<ILevelUpStatisticComponentProps
   return (
     <div className={s.container}>
       <div className={s.wrapper}>
-        <h3>{remaning_tests} тестов для нового уровня</h3>
+        <h3>{remainingTests} тестов для нового уровня</h3>
         <div className={s.img_and_text}>
           <ImgAndTextComponent isDone={true} text={'Тесты тем'} />
           <ImgAndTextComponent isDone={false} text={'Случайные тесты'} />

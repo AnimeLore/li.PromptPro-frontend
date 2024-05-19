@@ -1,0 +1,8 @@
+@import "styles/global.scss";
+
+.container {
+  display: flex;
+  background: $color-background-secondary;
+  padding: 20px;
+  border-radius: 12px;
+}

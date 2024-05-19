@@ -1,0 +1,30 @@
+@import "styles/global.scss";
+
+.container {
+  margin: 0;
+  background: $color-background-primary;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 12px 19px 9px;
+  margin-right: 10px;
+
+  .internal_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    padding: 12px 3px 10px;
+
+
+    .number {
+      @include heading1(24px, 30%, $color-text-primary)
+    }
+
+    .day_of_month {
+      @include paragraph2(14px, 130%, $color-text-secondary);
+      margin-left: 2px;
+    }
+  }
+}
+

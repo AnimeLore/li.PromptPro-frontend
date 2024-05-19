@@ -1,0 +1,16 @@
+@import "styles/global.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    @include heading2(18px, 135%, $color-text-primary);
+  }
+
+  p {
+    @include paragraph2(14px, 130%, $color-text-secondary);
+  }
+}
