@@ -2,6 +2,7 @@ import React from 'react';
 
 import s from './DatesAndStreak.module.scss';
 
+import { ReactComponent as ArrowSvg } from '../../../assets/icons/arrow-right.svg';
 import { IDatesAndStreakProps } from '../../../types/CommonStatisticsComponentProps/DatesAndStreakProps/IDatesAndStreakProps';
 import { DateBlockComponent } from '../../DateBlockComponent/DateBlockComponent';
 import { BlockDateAndMonth } from '../BlockDateAndMonth/BlockDateAndMonth';
@@ -25,7 +26,9 @@ export const DatesAndStreak: React.FC<IDatesAndStreakProps> = ({ currentDate, st
           <DateBlockComponent isActive={true} number={26} />
           <DateBlockComponent isActive={true} number={25} />
           <DateBlockComponent isActive={false} number={24} />
-          <button className={s.btn}>{'>'}</button>
+          <button className={s.btn}>
+            <ArrowSvg />
+          </button>
         </div>
       </div>
     </div>
