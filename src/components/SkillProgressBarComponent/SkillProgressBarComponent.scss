@@ -1,0 +1,42 @@
+@import "../../styles/global.scss";
+@import "../../../public/styles.css";
+@import "../SkillToProgressComponent/SkillToProgressComponent.css";
+
+.SkillProgressBarComponent {
+  max-width: 372px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid $color-stroke-primary;
+
+  &__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h4 {
+        @include heading2(18px, 135%, $color-text-primary);
+      }
+
+      p {
+        @include paragraph2(14px, 130%, $color-text-secondary);
+      }
+    }
+
+    select {
+      @include heading2(18px, 135%, $color-text-secondary);
+      max-width: 94px;
+      border: none;
+      appearance: none;
+      background: url("../../assets/icons/arrow-bottom.svg") no-repeat right;
+    }
+  }
+}

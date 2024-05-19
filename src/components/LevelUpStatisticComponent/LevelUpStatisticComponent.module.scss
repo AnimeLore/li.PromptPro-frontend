@@ -1,10 +1,11 @@
-@import "styles/global.scss";
+@import "styles/global";
 
 .container {
-  background: $color-background-secondary;
   max-width: 412px;
   max-height: 212px;
   padding: 16px 20px;
+
+  background: $color-background-secondary;
   border-radius: 20px;
 
   .wrapper {
@@ -14,25 +15,27 @@
 
     .img_and_text {
       display: flex;
-      justify-content: center;
+      gap: 8px;
       align-items: center;
+      justify-content: center;
+
       margin-top: 12px;
       margin-bottom: 21px;
-      gap: 8px;
     }
   }
 
   .RowToLevelUp {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
     margin-bottom: 21px;
 
     .kubiks {
       display: flex;
-      justify-content: space-between;
       gap: 4px;
+      justify-content: space-between;
     }
   }
 }
