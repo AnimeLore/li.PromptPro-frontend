@@ -1,0 +1,46 @@
+@import "styles/global.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .percents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include paragraph1(16px, 125%, $color-text-primary);
+    margin-bottom: 12px;
+    text-wrap: avoid;
+    width: 230px;
+    //width: 100%;
+
+
+    a {
+      color: $color-text-active;
+    }
+
+  }
+
+  .statistics {
+    width: 230px;
+    .statistics_btn {
+      @include controls-button(14px, 120%, $color-text-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-weight: bolder;
+        font-size: 20px;
+        margin-right: 5px;
+        color: black;
+      }
+    }
+  }
+}

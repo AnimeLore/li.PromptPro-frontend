@@ -25,7 +25,7 @@ export const DatesAndStreak: React.FC<IDatesAndStreakProps> = ({ currentDate, st
           <DateBlockComponent isActive={true} number={26} />
           <DateBlockComponent isActive={true} number={25} />
           <DateBlockComponent isActive={false} number={24} />
-          <button>{'>'}</button>
+          <button className={s.btn}>{'>'}</button>
         </div>
       </div>
     </div>
